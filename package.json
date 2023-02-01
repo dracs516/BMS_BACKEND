@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "moment-timezone": "^0.5.37",
+    "mongoose": "^6.5.4",
+    "nodemon": "^2.0.19"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "deploy-node-app": {
+    "prod": {
+      "port": 4000,
+      "protocol": "http",
+      "entrypoint": "src/api/index.js",
+      "type": "spa"
+    },
+    "dev": {
+      "port": 4000,
+      "protocol": "http",
+      "entrypoint": "src/api/index.js",
+      "registry": "",
+      "type": "spa",
+      "isPublic": false
+    }
+  },
+  "proxy": "http://localhost:4000"
+}
